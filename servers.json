@@ -1,0 +1,38 @@
+{
+	"Example IP/Port Check": {
+		"type": "port",
+		"host": "93.184.216.34",
+		"port": 80
+	},
+	"Example Domain/Port Check": {
+		"type": "port",
+		"host": "example.com",
+		"port": 443
+	},
+	"Example IP Ping Check": {
+		"type": "ping",
+		"host": "93.184.216.34"
+	},
+	"Example Domain Ping Check": {
+		"type": "ping",
+		"host": "example.com"
+	},
+	"Example HTTP Response Check": {
+		"type": "http",
+		"url": "http://example.com:80/"
+	},
+	"Example HTTPS Response Check": {
+		"type": "http",
+		"url": "https://example.com/",
+		"verify_TLS": true,
+		"look_for": "Example Domain"
+	},
+	"Example HTTPS Response Check With Auth Credentials": {
+		"type": "http",
+		"url": "https://example.com/",
+		"verify_TLS": true,
+		"look_for": "Example Domain",
+		"auth_user": "username",
+		"auth_pass": "password"
+	}
+}
