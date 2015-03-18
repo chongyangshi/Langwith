@@ -111,7 +111,7 @@ try:
                 gevent_jobs += [gevent.spawn(checker.check_HTTP_response_content, item[4], item[5], item[6], item[7])]
                 gevent_jobs_results += [[item[0], False]]
 
-        gevent.joinall(gevent_jobs, timeout=settings[0]-2)
+        gevent.joinall(gevent_jobs, timeout=13)
 
         for i in range(0,len(gevent_jobs)): #Copy the results into the result list.
             gevent_jobs_results[i][1] = gevent_jobs[i].value

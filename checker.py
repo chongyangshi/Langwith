@@ -73,7 +73,7 @@ def check_remote_ping(target):
         return False
 
     else:
-        ping_response = system("ping -c 2 -t 2 " + target + " > /dev/null 2>&1")
+        ping_response = system("ping -c 2 " + target + " > /dev/null 2>&1")
         if ping_response == 0:
             return True
         else:
