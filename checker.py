@@ -1,10 +1,22 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+#
+# The MIT License (MIT)
+# Copyright (c) 2015 icydoge (icydoge@gmail.com)
+# For full license details, see LICENSE.
+#
+# Langwith.checker: this module contains the three functions for checking if a target hostname/IP/url is reachable.
+
 import socket
-import requests
-import utils
-import urllib3.contrib.pyopenssl
 from os import system
+
+import requests
+import urllib3.contrib.pyopenssl
 from gevent import monkey
 
+import utils
+
+#Initialise socket and requests configs.
 monkey.patch_socket()
 socket.setdefaulttimeout(2)
 urllib3.contrib.pyopenssl.inject_into_urllib3()

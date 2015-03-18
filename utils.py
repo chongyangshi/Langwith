@@ -1,3 +1,12 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+#
+# The MIT License (MIT)
+# Copyright (c) 2015 icydoge (icydoge@gmail.com)
+# For full license details, see LICENSE.
+#
+# Langwith.utils: this module provides utility functions for other parts of the program.
+
 import socket
 import json
 import os.path
@@ -9,11 +18,34 @@ from collections import OrderedDict
 
 def parse_json():
 
-    """ Parse the servers.json configuration file, load JSON data into a 2-D list.
+    """ Parse the servers.json and settings.json configuration files, load JSON data into lists.
         Input: None
-        Accesses: ./servers.json
-        Output: (servers) % (list)
+        Accesses: ./servers.json, ./settings.json
+        Output: (servers, settings) % (list, list)
     """
+
+    #Parse config file.
+    if not os.path.isfile('./settings.json'):
+        print "utils.py: settings.json does not exist!"
+        exit(1)
+
+    with open('settings.json') as SettingsFile:
+
+        SettingsData = json.load(SettingsFile, object_pairs_hook=OrderedDict)
+
+        refresh_interval = int(SettingsData['refresh_interval'])
+        play_alarm = False
+        
+        if not (15 <= refresh_interval <= 300):
+            print "utils.py: In settings.json, 'refresh_interval' can only be set between 15 and 300 (seconds)!"
+            exit(1)
+
+        if SettingsData['play_alarm'] == True:
+            play_alarm = True
+
+        settings = [refresh_interval, play_alarm]
+
+    #Parse servers config.
     if not os.path.isfile('./servers.json'):
         print "utils.py: servers.json does not exist!"
         exit(1)
@@ -69,7 +101,9 @@ def parse_json():
             check_count += 1
 
     JSONFile.close()
-    return checks
+    SettingsFile.close()
+
+    return checks, settings
 
 
 def ip_check(serverip):
@@ -117,4 +151,23 @@ def log_error(error_content):
     error_content = str(datetime.now()) + " " + str(error_content) + "\n"
     with open("logs.txt", "a") as log_file:
         log_file.write(error_content)
+
+
+def fix_width(width, input_string):
+
+    """ Cut or stuff the input string into a fixed width, by truncating longer ones and adding spaces to shorter ones.
+        Input: (width, input_string) % (int, str)
+        Output: (fixed_width_string) % (str)
+    """
+    input_string = str(input_string)
+    width = int(width)
+
+    if len(input_string) >= width:
+        input_string = input_string[:width-3] + "..."
+    else:
+        input_string = input_string + ' ' * (width - len(input_string))
+
+    return input_string
+
+
 

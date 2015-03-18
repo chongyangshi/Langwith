@@ -17,10 +17,6 @@
 		"type": "ping",
 		"host": "example.com"
 	},
-	"Ping Check - This one does not respond to pings": {
-		"type": "ping",
-		"host": "eu.battle.net"
-	},
 	"Example HTTP Response Check": {
 		"type": "http",
 		"url": "http://example.com:80/"
@@ -31,7 +27,7 @@
 		"verify_TLS": true,
 		"look_for": "Example Domain"
 	},
-	"Example HTTPS Response Check With Auth Credentials": {
+	"Example HTTPS With Auth": {
 		"type": "http",
 		"url": "https://example.com/",
 		"verify_TLS": true,
