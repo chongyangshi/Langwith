@@ -23,7 +23,7 @@ def check_port_open(target):
     """
 
     if not isinstance(target, tuple):
-        raise ValueError("check_open(): expecting a tuple as target IP and port.")
+        raise ValueError("check_port_open(): expecting a tuple as target IP and port.")
     
     try:
         test_result = socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect_ex(target)
@@ -56,7 +56,7 @@ def check_remote_ping(target):
     """
 
     if not utils.ip_check(target):
-        error_log = "check_port_open(): " + str(target) + " is not a valid IP to test."
+        error_log = "check_remote_ping(): " + str(target) + " is not a valid IP to test."
         utils.log_error(error_log)
         return False
 

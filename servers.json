@@ -17,6 +17,10 @@
 		"type": "ping",
 		"host": "example.com"
 	},
+	"Ping Check - This one does not respond to pings": {
+		"type": "ping",
+		"host": "eu.battle.net"
+	},
 	"Example HTTP Response Check": {
 		"type": "http",
 		"url": "http://example.com:80/"

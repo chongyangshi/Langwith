@@ -30,7 +30,7 @@ def parse_json():
             exit(1)
 
         for check in JSONData:
-            checks_entry = [check_count, str(check)]
+            checks_entry = [check_count, False, str(check)] #initialise current state, False = down, True = up; we start from down
             
             if JSONData[check]['type'] == 'port':
                 if not (0 < JSONData[check]['port'] < 65536):
