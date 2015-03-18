@@ -77,4 +77,7 @@ This is my first attempt at using curses, so I expect my implementation to be fa
 Feedback, bug reports and pull requests are very welcome.
 You can also contact me at shi[AT]ebornet.com .
 
+###ToDos
+SMTP email notification when a server goes offline, or potentially through an email sending service's API.
+Past uptime records stored locally.
 
