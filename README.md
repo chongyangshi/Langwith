@@ -16,6 +16,8 @@ Optionally, if the system running the script is audio-capable (e.g. desktop mach
 ![1](https://i.imgur.com/1ITo0Fu.png Some servers are down.)
 
 ##Installation
+Langwith can run on most Linux distributions, Mac OS X, and potentially BSDs (although untested).
+
 Langwith is written for [Python 2.7](https://www.python.org/downloads/). It requires some other Python libraries.
 
 If you are using a linux distribution, you may wish to install libffi-dev and libssl-dev or their equivalents on non-Debian/Ubuntu distros.
@@ -70,6 +72,10 @@ Set *verify_TLS* to *false* if you do not want TLS server's certificate to be ve
 Omit *auth_user* and *auth_user* if simple HTTP authentication is not required on the monitored server.<br />
 You can set Langwith to check if the accessed content contains a string, as defined in *look_for*. It can also be omitted when not required.<br />
 For example configurations, see the default **servers.json**.
+
+To run Langwith, ensure that the terminal size is sufficient for the number of entries to display, and change to the directory containing Langwith's code. Run:
+<pre>python main.py</pre>
+
 
 ##Feedback, Bug Reports, and Pull Requests
 This is my first attempt at using curses, so I expect my implementation to be far from perfect.
