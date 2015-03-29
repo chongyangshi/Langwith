@@ -94,6 +94,6 @@ Feedback, bug reports and pull requests are very welcome.
 You can also contact me at shi[AT]ebornet.com .
 
 ###ToDos
-- SMTP email notification when a server goes offline, or potentially through an email sending service's API.<br />
+- <del>SMTP email notification when a server goes offline, or potentially through an email sending service's API.</del> Email notifications now available with Mailgun API.<br />
 - Past uptime records stored locally.
 
