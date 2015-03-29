@@ -10,8 +10,9 @@
 import socket
 import json
 import os.path
+import re
+import requests
 from sys import exit
-from re import match
 from datetime import datetime
 from collections import OrderedDict
 
@@ -43,7 +44,44 @@ def parse_json():
         if SettingsData['play_alarm'] == True:
             play_alarm = True
 
-        settings = [refresh_interval, play_alarm]
+        if SettingsData['mail_notification'] == True:
+            
+            domain_check = re.compile("^([a-zA-Z0-9](?:(?:[a-zA-Z0-9-]*|(?<!-)\.(?![-.]))*[a-zA-Z0-9]+)?)$")
+            key_check = re.compile("^[\w\d_-]*$")
+            email_check = re.compile("([^@|\s]+@[^@]+\.[^@|\s]+)")
+            
+            if (domain_check.search(SettingsData['mailgun_domain']) is None) or (SettingsData['mailgun_domain'] == ""):
+                print "utils.py: In settings.json, 'mailgun_domain' must be a valid domain name verified with Mailgun!"
+                exit(1)
+
+            if (not SettingsData['mailgun_key'].startswith("key-")) or (key_check.search(SettingsData['mailgun_key'][4:]) is None):
+                print "utils.py: In settings.json, 'mailgun_key' must be a valid Mailgun API Key starts with 'key-'!"
+                exit(1)
+
+            mail_notification = True
+            mailgun_domain = str(SettingsData['mailgun_domain'])
+            mailgun_key = str(SettingsData['mailgun_key'])
+            mail_recipients = []
+
+            if SettingsData["mail_notification_recipients"] == []:
+                print "utils.py: In settings.json, 'mail_notification_recipients' does not contain an email address to send notifications to!"
+                exit(1)
+
+            for email in SettingsData["mail_notification_recipients"]:
+                if email_check.search(str(email)) is None:
+                    print "utils.py: In settings.json, " + str(email) + " is not a valid email address!"
+                    exit(1)
+                else:
+                    mail_recipients.append(str(email))
+
+        else:
+
+            mail_notification = False
+            mailgun_domain = ""
+            mailgun_key = ""
+            mail_recipients = []
+
+        settings = [refresh_interval, play_alarm, mail_notification, [mailgun_domain, mailgun_key], mail_recipients]
 
     #Parse servers config.
     if not os.path.isfile('./servers.json'):
@@ -68,10 +106,10 @@ def parse_json():
                 if not (0 < JSONData[check]['port'] < 65536):
                     print "utils.py: invalid port in servers.json for check ", str(check)
                     exit(1)
-                checks_entry += ['port', str(JSONData[check]['host']), JSONData[check]['port']]
+                checks_entry += ['port', str(JSONData[check]['host']), JSONData[check]['port'], False]  #Email notification sent, False = not sent, reset to False when back up.
 
             elif JSONData[check]['type'] == 'ping':
-                checks_entry += ['ping', str(JSONData[check]['host'])]
+                checks_entry += ['ping', str(JSONData[check]['host']), False]  #Email notification sent, False = not sent, reset to False when back up.
 
             elif JSONData[check]['type'] == 'http':
                 if not (JSONData[check]['url'].startswith('https://') or JSONData[check]['url'].startswith('http://')):
@@ -91,7 +129,7 @@ def parse_json():
                         auth = (JSONData[check]['auth_user'], JSONData[check]['auth_pass'])
                 else:
                     auth = None
-                checks_entry += ['http', str(JSONData[check]['url']), str(JSONData[check]['look_for']), auth, JSONData[check]['verify_TLS']]
+                checks_entry += ['http', str(JSONData[check]['url']), str(JSONData[check]['look_for']), auth, JSONData[check]['verify_TLS'], False]  #Email notification sent, False = not sent, reset to False when back up.
 
             else:
                 print "utils.py: invalid check type in servers.json for check ", str(check)
@@ -168,6 +206,31 @@ def fix_width(width, input_string):
         input_string = input_string + ' ' * (width - len(input_string))
 
     return input_string
+
+
+def send_down_notification(monitor_name, monitor_type, mailgun_credentials, mail_recipients):
+
+    """ Send email notification to defined recipients through Mailgun API, if desired in the settings.
+        Input: (monitor_name, monitor_type, mailgun_credentials, recipients) % (str, str, [str, str], [mail_notification_recipients])
+        Output: (send_result) % (Boolean)
+    """
+
+    if monitor_type == "port":
+        down_message = "This is an automated email sent by Langwith. \n\nLangwith has detected that TCP Port Monitor '" + monitor_name + "' is down as of system time " + str(datetime.now()) + ". \n\nRegards, \nLangwith Monitoring running on " + str(os.uname()[1])
+    elif monitor_type == "ping":
+        down_message = "This is an automated email sent by Langwith. \n\nLangwith has detected that ICMP Ping Monitor '" + monitor_name + "' is down as of system time " + str(datetime.now()) + ". \n\nRegards, \nLangwith Monitoring running on " + str(os.uname()[1])
+    elif monitor_type == "http":
+        down_message = "This is an automated email sent by Langwith. \n\nLangwith has detected that HTTP/HTTPS Monitor '" + monitor_name + "' is down as of system time " + str(datetime.now()) + ". \n\nRegards, \nLangwith Monitoring running on " + str(os.uname()[1])
+    else:
+        return False    #should never happen, since we have checked the type of a monitor in configuration parse_json().
+
+    down_subject = monitor_name + " Is Down. (Langwith Monitoring)"
+    down_email_sender = "Langwith Monitoring <monitoring@" + str(mailgun_credentials[0]) + ">"
+    mailgun_api_url = "https://api.mailgun.net/v2/" + str(mailgun_credentials[0]) + "/messages"
+    requests.post(mailgun_api_url, auth=("api", mailgun_credentials[1]), data={"from": down_email_sender, "to": mail_recipients, "subject": down_subject, "text": down_message})
+
+    return True
+
 
 
 

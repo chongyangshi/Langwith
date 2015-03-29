@@ -29,6 +29,9 @@ requests.packages.urllib3.disable_warnings()
 
 #Read config.
 servers, settings = utils.parse_json()
+mail_notification = settings[2]
+mailgun_credentials = settings[3]
+mail_recipients = settings[4]
 
 #Initialise curses.
 stdscr = curses.initscr()
@@ -124,16 +127,26 @@ try:
         for item in servers:
             if item[1] == False:   #Trigger at-least-one-server-down indicator.
                 at_least_one_server_down = True
-                utils.log_error(server[2] + " is checked to be down.")
                 break
         
+        #Setting up information for display, and send emails for downed servers, if needed.
         display_matrix = []
+        email_jobs = []
         for item in servers:
             if item[1] == True:     #Entry is UP.
                 display_matrix += [[True, utils.fix_width(4, str(item[0]+1)) + utils.fix_width(30, str(item[2])) + "   " + str(item[3])]]
+                item[-1] = False    #Reset email sent state to False.
             elif item[1] == False:  #Entry is DOWN.
                 display_matrix += [[False, utils.fix_width(4, str(item[0]+1)) + utils.fix_width(30, str(item[2])) + "   " + str(item[3])]]
+                if mail_notification:
+                    utils.log_error(item[2] + " is checked to be down and email sent.")
+                    if item[-1] == False: #There has not been an email sent when requested.
+                        email_jobs += [gevent.spawn(utils.send_down_notification, str(item[2]), str(item[3]), mailgun_credentials, mail_recipients)]
+                        item[-1] = True   #Set email sent state to True.
+                else:
+                    utils.log_error(item[2] + " is checked to be down.")
             #item[0]+1 so that server ID starts from 1 on display
+        gevent.joinall(email_jobs, timeout=5)
 
         #Start drawing.
         stdscr.clear()
