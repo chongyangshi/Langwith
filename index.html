@@ -1,0 +1,186 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Langwith</title>
+  <meta name="description" content="Easy server monitoring on command line.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Langwith</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Easy server monitoring on command line.</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/icydoge/Langwith/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/icydoge/Langwith/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/icydoge/Langwith" class="code">View Langwith on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a id="langwith" class="anchor" href="#langwith" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langwith</h1>
+
+<p>Easy server monitoring on command line.</p>
+
+<h2>
+<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is it?</h2>
+
+<p>Langwith is a server monitoring tool for displaying the status of your servers in your terminal. It supports three methods of checks: TCP Port, Ping and HTTP(S) Response.</p>
+
+<p>The interface, implemented in <a href="https://docs.python.org/2/library/curses.html">curses</a> provides a single-page at-a-glance style display, suitable for putting up on a monitor or projector screen.</p>
+
+<p>Checks are initiated from the system that is running the script. Langwith can also run in the SSH shell of a remote server. No configuration is needed on servers being monitored, although it's a good idea to make sure that the monitored servers are reachable from the system running the program, in order to prevent false positives.</p>
+
+<p>Optionally, if the system running the script is audio-capable (e.g. desktop machine), an alarm can be set to go off when a monitored server goes offline.</p>
+
+<h2>
+<a id="interface" class="anchor" href="#interface" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interface</h2>
+
+<p><img src="https://i.imgur.com/MGvcZkE.png" alt="All servers are up."></p>
+
+<p><img src="https://i.imgur.com/1ITo0Fu.png" alt="Some servers are down."></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Langwith can run on most Linux distributions, Mac OS X, and potentially BSDs (although untested).</p>
+
+<p>Langwith is written for <a href="https://www.python.org/downloads/">Python 2.7</a>. It requires some other Python libraries.</p>
+
+<p>If you are using a linux distribution, you may wish to install libffi-dev and libssl-dev or their equivalents on non-Debian/Ubuntu distros.</p>
+
+<p>If you have pip installed,</p>
+
+<pre>
+pip install gevent greenlet pyopenssl ndg-httpsclient pyasn1 urllib3 requests
+</pre>
+
+<p>should install all dependencies required.</p>
+
+<p>Then you can download or git clone Langwith, and configure it as explained below.</p>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h2>
+
+<h3>
+<a id="langwith-settings" class="anchor" href="#langwith-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langwith Settings</h3>
+
+<p>Edit <strong>settings.json</strong>, set the interval (15 - 300, in seconds) you would like for Langwith to run all checks (<em>refresh_interval</em>); and set <em>play_alarm</em> to <em>true</em> or <em>false</em> depends on whether you want a short alarm to go off when a server goes offline.</p>
+
+<h4>
+<a id="email-notifications-optional" class="anchor" href="#email-notifications-optional" aria-hidden="true"><span class="octicon octicon-link"></span></a>Email Notifications (Optional)</h4>
+
+<p>You can also set Langwith to notify you via email when a server goes down. To avoid creating problems by sending emails through SMTP from your device, Langwith can be used with <a href="https://mailgun.com">Mailgun</a> sending service, which provides you with a free monthly sending allowance of 10,000 emails. If you want to make Langwith send notification emails, you need to register a free account at <a href="https://mailgun.com">Mailgun</a>, and verify your email sending domain. </p>
+
+<p>In <strong>settings.json</strong>, you can then set <em>mail_notification</em> to <em>true</em>, <em>mailgun_domain</em> to your verified email sending domain, <em>mailgun_key</em> to your API key from Mailgun like <em>"key-abcdefghijklmnopqrstuvwxyz"</em> and <em>mail_notification_recipients</em> to a list of email addresses you wish to be notified when a server goes down, for example: <em>["<a href="mailto:your_mailbox1@example.com">your_mailbox1@example.com</a>", "<a href="mailto:your_mailbox2@example.com">your_mailbox2@example.com</a>"]</em>.</p>
+
+<h3>
+<a id="server-settings" class="anchor" href="#server-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server Settings</h3>
+
+<p>Edit <strong>servers.json</strong>, configure the servers you want to monitor. Some examples are already in there, you may change or delete them at your convenience.</p>
+
+<p>Configurations for individual checks by type:</p>
+
+<p><strong>TCP Port</strong></p>
+
+<pre>
+"Name for your TCP Port Check": {
+    "type": "port",
+    "host": "IP Address or Domain",
+    "port": {Integer TCP port number}
+},
+</pre>
+
+<p><strong>Ping</strong></p>
+
+<pre>
+"Name for your Ping Check": {
+    "type": "ping",
+    "host": "IP Address or Domain",
+},
+</pre>
+
+<p>If your domain is on dynamic DNS, Langwith will attempt to resolve the domain name at every re-check, and use the first A record returned.</p>
+
+<p><strong>HTTP(S)</strong></p>
+
+<pre>
+"Name for your HTTP(S) Check": {
+    "type": "http",
+    "url": "Full HTTP(S) URL for access attempt",
+    "verify_TLS": true,
+    "look_for": "String to be looked for on the accessed content, check will return fail if string not found",
+    "auth_user": "username",
+    "auth_pass": "password"
+}
+</pre>
+
+<p>Set <em>verify_TLS</em> to <em>false</em> if you do not want TLS server's certificate to be verified. It is true by default.</p>
+
+<p>Omit <em>auth_user</em> and <em>auth_user</em> if simple HTTP authentication is not required on the monitored server.<br>
+You can set Langwith to check if the accessed content contains a string, as defined in <em>look_for</em>. It can also be omitted when not required.<br>
+For example configurations, see the default <strong>servers.json</strong>.</p>
+
+<p>To run Langwith, ensure that the terminal size is sufficient for the number of entries to display, and change to the directory containing Langwith's code. Run:</p>
+
+<pre>python main.py</pre>
+
+<h2>
+<a id="feedback-bug-reports-and-pull-requests" class="anchor" href="#feedback-bug-reports-and-pull-requests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feedback, Bug Reports, and Pull Requests</h2>
+
+<p>This is my first attempt at using curses, so I expect my implementation to be far from perfect.</p>
+
+<p>Feedback, bug reports and pull requests are very welcome.
+You can also contact me at shi[AT]ebornet.com .</p>
+
+<h3>
+<a id="todos" class="anchor" href="#todos" aria-hidden="true"><span class="octicon octicon-link"></span></a>ToDos</h3>
+
+<ul>
+<li>
+<del>SMTP email notification when a server goes offline, or potentially through an email sending service's API.</del> Email notifications now available with Mailgun API.<br>
+</li>
+<li>Past uptime records stored locally.</li>
+</ul>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/icydoge" class="avatar"><img src="https://avatars0.githubusercontent.com/u/8771937?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/icydoge">icydoge</a> maintains <a href="https://github.com/icydoge/Langwith">Langwith</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/icydoge/Langwith/tarball/master" class="tar">tar</a><a href="https://github.com/icydoge/Langwith/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
