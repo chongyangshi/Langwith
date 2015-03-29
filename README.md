@@ -32,7 +32,17 @@ Then you can download or git clone Langwith, and configure it as explained below
 
 ##Configuration
 
+###Langwith Settings
+
 Edit **settings.json**, set the interval (15 - 300, in seconds) you would like for Langwith to run all checks (*refresh_interval*); and set *play_alarm* to *true* or *false* depends on whether you want a short alarm to go off when a server goes offline.
+
+####Email Notifications (Optional)
+
+You can also set Langwith to notify you via email when a server goes down. To avoid creating problems by sending emails through SMTP from your device, Langwith can be used with [Mailgun](https://mailgun.com) sending service, which provides you with a free monthly sending allowance of 10,000 emails. If you want to make Langwith send notification emails, you need to register a free account at [Mailgun](https://mailgun.com), and verify your email sending domain. 
+
+In **settings.json**, you can then set *mail_notification* to *true*, *mailgun_domain* to your verified email sending domain, *mailgun_key* to your API key from Mailgun like *"key-abcdefghijklmnopqrstuvwxyz"* and *mail_notification_recipients* to a list of email addresses you wish to be notified when a server goes down, for example: *["your_mailbox1@example.com", "your_mailbox2@example.com"]*.
+
+### Server Settings
 
 Edit **servers.json**, configure the servers you want to monitor. Some examples are already in there, you may change or delete them at your convenience.
 
