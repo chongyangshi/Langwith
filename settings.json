@@ -1,7 +1,7 @@
 {
 	"refresh_interval": 30,
 	"play_alarm": true,
-	"mail_notification": true,
+	"mail_notification": false,
 	"mailgun_domain": "example.com",
 	"mailgun_key": "key-your-mailgun-api-key",
 	"mail_notification_recipients": ["your_mailbox@example.com"]
