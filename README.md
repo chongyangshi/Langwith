@@ -23,9 +23,9 @@ Langwith is written for [Python 2.7](https://www.python.org/downloads/). It requ
 If you are using a linux distribution, you may wish to install libffi-dev and libssl-dev or their equivalents on non-Debian/Ubuntu distros.
 
 If you have pip installed,
-<pre>
-pip install gevent greenlet pyopenssl ndg-httpsclient pyasn1 urllib3 requests
-</pre>
+
+    pip install gevent greenlet pyopenssl ndg-httpsclient pyasn1 urllib3 requests
+
 should install all dependencies required.
 
 Then you can download or git clone Langwith, and configure it as explained below.
@@ -49,42 +49,43 @@ Edit **servers.json**, configure the servers you want to monitor. Some examples 
 Configurations for individual checks by type:
 
 **TCP Port**
-<pre>
-"Name for your TCP Port Check": {
-	"type": "port",
-	"host": "IP Address or Domain",
-	"port": {Integer TCP port number}
-},
-</pre>
+
+    "Name for your TCP Port Check": {
+       "type": "port",
+        "host": "IP Address or Domain",
+        "port": {Integer TCP port number}
+    },
 
 **Ping**
-<pre>
-"Name for your Ping Check": {
-	"type": "ping",
-	"host": "IP Address or Domain",
-},
-</pre>
+
+    "Name for your Ping Check": {
+        "type": "ping",
+        "host": "IP Address or Domain",
+    },
+
 If your domain is on dynamic DNS, Langwith will attempt to resolve the domain name at every re-check, and use the first A record returned.
 
 **HTTP(S)**
-<pre>
-"Name for your HTTP(S) Check": {
-	"type": "http",
-	"url": "Full HTTP(S) URL for access attempt",
-	"verify_TLS": true,
-	"look_for": "String to be looked for on the accessed content, check will return fail if string not found",
-	"auth_user": "username",
-	"auth_pass": "password"
-}
-</pre>
+
+    "Name for your HTTP(S) Check": {
+        "type": "http",
+        "url": "Full HTTP(S) URL for access attempt",
+        "verify_TLS": true,
+        "look_for": "String to be looked for on the accessed content, check will return fail if string not found",
+        "auth_user": "username",
+        "auth_pass": "password"
+    }
+
 Set *verify_TLS* to *false* if you do not want TLS server's certificate to be verified. It is true by default.
 
-Omit *auth_user* and *auth_user* if simple HTTP authentication is not required on the monitored server.<br />
-You can set Langwith to check if the accessed content contains a string, as defined in *look_for*. It can also be omitted when not required.<br />
+Omit *auth_user* and *auth_user* if simple HTTP authentication is not required on the monitored server.
+
+You can set Langwith to check if the accessed content contains a string, as defined in *look_for*. It can also be omitted when not required.
+
 For example configurations, see the default **servers.json**.
 
 To run Langwith, ensure that the terminal size is sufficient for the number of entries to display, and change to the directory containing Langwith's code. Run:
-<pre>python main.py</pre>
+    python main.py
 
 
 ##Feedback, Bug Reports, and Pull Requests
@@ -94,6 +95,8 @@ Feedback, bug reports and pull requests are very welcome.
 You can also contact me at shi[AT]ebornet.com .
 
 ###ToDos
-- <del>SMTP email notification when a server goes offline, or potentially through an email sending service's API.</del> Email notifications now available with Mailgun API.<br />
+
+- ~~SMTP email notification when a server goes offline, or potentially through an email sending service's API.~~ Email notifications now available with Mailgun API.
+
 - Past uptime records stored locally.
 
