@@ -30,7 +30,7 @@ def check_port_open(target):
         Otherwise, True will be returned.
         The function assumes that the server IP and Port passed in are valid.
         Input: ((server_ip, server_port) % (str, int))
-        Outout: Boolean
+        Output: Boolean
         For this function, passing in a host name is not allowed.
     """
 
@@ -91,7 +91,7 @@ def check_HTTP_response_content(target, test_string='', auth_credentials=None, v
         The function assumes that the target address and Port passed in are valid.
         Input: (target, test_string, TLS_verify, auth_credentials) % (str, str, Boolean, tuple)        
                 target is a full URL.
-        Outout: Boolean
+        Output: Boolean
     """
     if verify_TLS_certificate != True:
         verify_TLS_certificate == False 

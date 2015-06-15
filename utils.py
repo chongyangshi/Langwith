@@ -149,7 +149,7 @@ def ip_check(serverip):
     """ Taken from EARCIS code.
         Check if the server IP passed in is a valid IPv4/v6 address, if not, return False; otherwise, return True.
         Input: (serverip) % (str)
-        Outout: Boolean
+        Output: Boolean
     """
 
     try:
@@ -171,7 +171,7 @@ def port_check(serverport):
     """ Taken from EARCIS code.
         Check if the server port passed in is a valid TCP port if not, return False; otherwise, return True.
         Input: (serverport) % (int)
-        Outout: Boolean
+        Output: Boolean
     """
 
     if not (0 < serverport < 65536):
