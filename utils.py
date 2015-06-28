@@ -103,32 +103,43 @@ def parse_json():
             checks_entry = [check_count, False, str(check)] #initialise current state, False = down, True = up; we start from down
             
             if JSONData[check]['type'] == 'port':
-                if not (0 < JSONData[check]['port'] < 65536):
+
+                if not (port_check(JSONData[check]['port'])):
                     print "utils.py: invalid port in servers.json for check ", str(check)
                     exit(1)
+
                 checks_entry += ['port', str(JSONData[check]['host']), JSONData[check]['port'], False]  #Email notification sent, False = not sent, reset to False when back up.
 
             elif JSONData[check]['type'] == 'ping':
                 checks_entry += ['ping', str(JSONData[check]['host']), False]  #Email notification sent, False = not sent, reset to False when back up.
 
             elif JSONData[check]['type'] == 'http':
+
                 if not (JSONData[check]['url'].startswith('https://') or JSONData[check]['url'].startswith('http://')):
                     print "utils.py: invalid url in servers.json for HTTP/HTTPS check ", str(check)
                     exit(1)
+
                 if not 'look_for' in JSONData[check]:
                     JSONData[check]['look_for'] = ''
+
                 if 'verify_TLS' in JSONData[check]:
+
                     if not (JSONData[check]['verify_TLS'] == False):
                         JSONData[check]['verify_TLS'] = True
+
                 else:
                     JSONData[check]['verify_TLS'] = True
+
                 if ('auth_user' in JSONData[check]) and ('auth_pass' in JSONData[check]):
+
                     if (JSONData[check]['auth_user'] == '' and JSONData[check]['auth_pass'] == ''):
                         auth = None
+                    
                     else:
                         auth = (JSONData[check]['auth_user'], JSONData[check]['auth_pass'])
                 else:
                     auth = None
+                
                 checks_entry += ['http', str(JSONData[check]['url']), str(JSONData[check]['look_for']), auth, JSONData[check]['verify_TLS'], False]  #Email notification sent, False = not sent, reset to False when back up.
 
             else:

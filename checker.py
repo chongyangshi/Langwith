@@ -99,7 +99,7 @@ def check_HTTP_response_content(target, test_string='', auth_credentials=None, v
     try:
         if auth_credentials != None:
             if not isinstance(auth_credentials, tuple):
-                raise ValueError("check_HTTP_response_content(): expecting a tuple of authentication credentials credentials.")
+                raise ValueError("check_HTTP_response_content(): expecting a tuple of authentication credentials.")
             response = requests.get(str(target), timeout=2, verify=verify_TLS_certificate, auth=auth_credentials)
         else:
             response = requests.get(str(target), timeout=2, verify=verify_TLS_certificate)
