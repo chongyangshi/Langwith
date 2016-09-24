@@ -52,3 +52,6 @@ docs/_build/
 
 # PyBuilder
 target/
+/Langwith.pyproj
+/Langwith1.pyproj
+/.vs/Langwith1/v14
