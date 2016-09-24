@@ -18,7 +18,7 @@ Optionally, if the system running the script is audio-capable (e.g. desktop mach
 ##Installation
 Langwith can run on most Linux distributions, Mac OS X, and potentially BSDs (although untested).
 
-Langwith is written for [Python 2.7](https://www.python.org/downloads/). It requires some other Python libraries.
+Langwith is written for [Python 3](https://www.python.org/downloads/). It requires some other Python libraries.
 
 If you are using a linux distribution, you may wish to install libffi-dev and libssl-dev or their equivalents on non-Debian/Ubuntu distros.
 
