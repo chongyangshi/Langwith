@@ -54,7 +54,7 @@ except SystemExit:
     curses.echo()
     curses.endwin()
     curses.nocbreak() 
-    print "Curses Error: Oops, the current terminal window size is not wide enough for the program. Please try to adjust font size or enlarge the window."
+    print("Curses Error: Oops, the current terminal window size is not wide enough for the program. Please try to adjust font size or enlarge the window.")
     exit(0)
 
 def interface_keystroke():
@@ -195,7 +195,7 @@ except curses.error:       #Clean-up before quitting.
     stdscr.keypad(0)
     curses.echo()
     curses.endwin()
-    print "Curses Error: Oops, the current terminal window is not long enough for the program. Please try to adjust font size or enlarge the window."
+    print("Curses Error: Oops, the current terminal window is not long enough for the program. Please try to adjust font size or enlarge the window.")
     exit(1)
 
 except (KeyboardInterrupt, SystemExit): #Clean-up before quitting.

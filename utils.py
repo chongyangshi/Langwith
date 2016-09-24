@@ -27,7 +27,7 @@ def parse_json():
 
     #Parse config file.
     if not os.path.isfile('./settings.json'):
-        print "utils.py: settings.json does not exist!"
+        print("utils.py: settings.json does not exist!")
         exit(1)
 
     with open('settings.json') as SettingsFile:
@@ -38,7 +38,7 @@ def parse_json():
         play_alarm = False
         
         if not (15 <= refresh_interval <= 300):
-            print "utils.py: In settings.json, 'refresh_interval' can only be set between 15 and 300 (seconds)!"
+            print("utils.py: In settings.json, 'refresh_interval' can only be set between 15 and 300 (seconds)!")
             exit(1)
 
         if SettingsData['play_alarm'] == True:
@@ -51,11 +51,11 @@ def parse_json():
             email_check = re.compile("([^@|\s]+@[^@]+\.[^@|\s]+)")
             
             if (domain_check.search(SettingsData['mailgun_domain']) is None) or (SettingsData['mailgun_domain'] == ""):
-                print "utils.py: In settings.json, 'mailgun_domain' must be a valid domain name verified with Mailgun!"
+                print("utils.py: In settings.json, 'mailgun_domain' must be a valid domain name verified with Mailgun!")
                 exit(1)
 
             if (not SettingsData['mailgun_key'].startswith("key-")) or (key_check.search(SettingsData['mailgun_key'][4:]) is None):
-                print "utils.py: In settings.json, 'mailgun_key' must be a valid Mailgun API Key starts with 'key-'!"
+                print("utils.py: In settings.json, 'mailgun_key' must be a valid Mailgun API Key starts with 'key-'!")
                 exit(1)
 
             mail_notification = True
@@ -64,12 +64,12 @@ def parse_json():
             mail_recipients = []
 
             if SettingsData["mail_notification_recipients"] == []:
-                print "utils.py: In settings.json, 'mail_notification_recipients' does not contain an email address to send notifications to!"
+                print("utils.py: In settings.json, 'mail_notification_recipients' does not contain an email address to send notifications to!")
                 exit(1)
 
             for email in SettingsData["mail_notification_recipients"]:
                 if email_check.search(str(email)) is None:
-                    print "utils.py: In settings.json, " + str(email) + " is not a valid email address!"
+                    print("utils.py: In settings.json, " + str(email) + " is not a valid email address!")
                     exit(1)
                 else:
                     mail_recipients.append(str(email))
@@ -85,7 +85,7 @@ def parse_json():
 
     #Parse servers config.
     if not os.path.isfile('./servers.json'):
-        print "utils.py: servers.json does not exist!"
+        print("utils.py: servers.json does not exist!")
         exit(1)
 
     checks = []
@@ -96,7 +96,7 @@ def parse_json():
         JSONData = json.load(JSONFile, object_pairs_hook=OrderedDict)
         
         if len(JSONData) == 0:
-            print "utils.py: servers.json contains no check."
+            print("utils.py: servers.json contains no check.")
             exit(1)
 
         for check in JSONData:
@@ -105,7 +105,7 @@ def parse_json():
             if JSONData[check]['type'] == 'port':
 
                 if not (port_check(JSONData[check]['port'])):
-                    print "utils.py: invalid port in servers.json for check ", str(check)
+                    print("utils.py: invalid port in servers.json for check ", str(check))
                     exit(1)
 
                 checks_entry += ['port', str(JSONData[check]['host']), JSONData[check]['port'], False]  #Email notification sent, False = not sent, reset to False when back up.
@@ -116,7 +116,7 @@ def parse_json():
             elif JSONData[check]['type'] == 'http':
 
                 if not (JSONData[check]['url'].startswith('https://') or JSONData[check]['url'].startswith('http://')):
-                    print "utils.py: invalid url in servers.json for HTTP/HTTPS check ", str(check)
+                    print("utils.py: invalid url in servers.json for HTTP/HTTPS check ", str(check))
                     exit(1)
 
                 if not 'look_for' in JSONData[check]:
@@ -143,7 +143,7 @@ def parse_json():
                 checks_entry += ['http', str(JSONData[check]['url']), str(JSONData[check]['look_for']), auth, JSONData[check]['verify_TLS'], False]  #Email notification sent, False = not sent, reset to False when back up.
 
             else:
-                print "utils.py: invalid check type in servers.json for check ", str(check)
+                print("utils.py: invalid check type in servers.json for check ", str(check))
                 exit(1)
 
             checks += [checks_entry]
