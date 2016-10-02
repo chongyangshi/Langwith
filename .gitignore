@@ -55,3 +55,8 @@ target/
 
 # Virtualenv
 py3env/
+
+# Virtual Studio stuff
+/.vs/Langwith/v14
+/Langwith.pyproj.user
+/Langwith.pyproj

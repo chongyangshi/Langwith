@@ -8,7 +8,7 @@
 # Langwith.checker: this module contains the three functions for checking if a target hostname/IP/url is reachable.
 
 import socket
-from os import system
+from os import system, name
 
 import requests
 import urllib3.contrib.pyopenssl
@@ -54,7 +54,7 @@ def check_port_open(target):
             return False
    
     except:
-        error_log = "check_port_open(): " + str(target) + " is not a valid IP to test."
+        error_log = "check_port_open(): " + str(target) + " is not a valid IP to test or the target machine refuses connection."
         utils.log_error(error_log)
         return False
 
@@ -66,14 +66,18 @@ def check_remote_ping(target):
         Input: (server_ip) % (string)
         Output: Boolean
     """
-
+    
     if not utils.ip_check(target):
         error_log = "check_remote_ping(): " + str(target) + " is not a valid IP to test."
         utils.log_error(error_log)
         return False
 
     else:
-        ping_response = system("ping -c 2 " + target + " > /dev/null 2>&1")
+
+        if name == "nt": # Windows
+            ping_response = system("ping -n 2 " + target + " >NUL")
+        else:
+            ping_response = system("ping -c 2 " + target + " > /dev/null 2>&1")
         if ping_response == 0:
             return True
         else:

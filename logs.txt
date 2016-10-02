@@ -1,0 +1,350 @@
+2016-09-30 19:18:11.586104 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:18:11.601729 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:18:11.601729 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:18:11.601729 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:18:11.601729 Example Domain/Port Check is checked to be down.
+2016-09-30 19:18:11.601729 Example IP Ping Check is checked to be down.
+2016-09-30 19:18:11.601729 Example Domain Ping Check is checked to be down.
+2016-09-30 19:18:11.601729 Example HTTP Response Check is checked to be down.
+2016-09-30 19:18:11.601729 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:18:11.601729 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:18:22.395652 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:18:22.411277 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:18:22.411277 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:18:22.411277 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:18:22.411277 Example Domain/Port Check is checked to be down.
+2016-09-30 19:18:22.411277 Example IP Ping Check is checked to be down.
+2016-09-30 19:18:22.411277 Example Domain Ping Check is checked to be down.
+2016-09-30 19:18:22.411277 Example HTTP Response Check is checked to be down.
+2016-09-30 19:18:22.411277 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:18:22.411277 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:18:42.645144 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:18:42.668989 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:18:42.668989 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:18:42.668989 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:18:42.668989 Example Domain/Port Check is checked to be down.
+2016-09-30 19:18:42.668989 Example IP Ping Check is checked to be down.
+2016-09-30 19:18:42.668989 Example Domain Ping Check is checked to be down.
+2016-09-30 19:18:42.668989 Example HTTP Response Check is checked to be down.
+2016-09-30 19:18:42.668989 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:18:42.684606 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:18:53.450586 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:18:53.466213 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:18:53.466213 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:18:53.466213 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:18:53.466213 Example Domain/Port Check is checked to be down.
+2016-09-30 19:18:53.466213 Example IP Ping Check is checked to be down.
+2016-09-30 19:18:53.466213 Example Domain Ping Check is checked to be down.
+2016-09-30 19:18:53.466213 Example HTTP Response Check is checked to be down.
+2016-09-30 19:18:53.466213 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:18:53.466213 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:19:13.699636 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:19:13.713656 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:19:13.714645 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:19:13.714645 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:19:13.717647 Example Domain/Port Check is checked to be down.
+2016-09-30 19:19:13.718649 Example IP Ping Check is checked to be down.
+2016-09-30 19:19:13.718649 Example Domain Ping Check is checked to be down.
+2016-09-30 19:19:13.721651 Example HTTP Response Check is checked to be down.
+2016-09-30 19:19:13.721651 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:19:13.724669 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:19:24.498660 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:19:24.519503 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:19:24.520346 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:19:24.521339 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:19:24.524167 Example Domain/Port Check is checked to be down.
+2016-09-30 19:19:24.524670 Example IP Ping Check is checked to be down.
+2016-09-30 19:19:24.528798 Example Domain Ping Check is checked to be down.
+2016-09-30 19:19:24.528798 Example HTTP Response Check is checked to be down.
+2016-09-30 19:19:24.532116 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:19:24.532619 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:19:44.739275 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:19:44.764840 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:19:44.765340 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:19:44.766349 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:19:44.769359 Example Domain/Port Check is checked to be down.
+2016-09-30 19:19:44.769873 Example IP Ping Check is checked to be down.
+2016-09-30 19:19:44.773368 Example Domain Ping Check is checked to be down.
+2016-09-30 19:19:44.773846 Example HTTP Response Check is checked to be down.
+2016-09-30 19:19:44.776868 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:19:44.777355 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:19:55.549652 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:19:55.564671 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:19:55.565692 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:19:55.569687 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:19:55.573695 Example Domain/Port Check is checked to be down.
+2016-09-30 19:19:55.573695 Example IP Ping Check is checked to be down.
+2016-09-30 19:19:55.578704 Example Domain Ping Check is checked to be down.
+2016-09-30 19:19:55.579201 Example HTTP Response Check is checked to be down.
+2016-09-30 19:19:55.582262 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:19:55.582765 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:20:15.795612 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:20:15.811559 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:20:15.812544 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:20:15.817565 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:20:15.822557 Example Domain/Port Check is checked to be down.
+2016-09-30 19:20:15.823553 Example IP Ping Check is checked to be down.
+2016-09-30 19:20:15.828555 Example Domain Ping Check is checked to be down.
+2016-09-30 19:20:15.829556 Example HTTP Response Check is checked to be down.
+2016-09-30 19:20:15.833571 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:20:15.834560 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:20:26.597022 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:20:26.614034 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:20:26.615035 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:20:26.621039 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:20:26.626042 Example Domain/Port Check is checked to be down.
+2016-09-30 19:20:26.627043 Example IP Ping Check is checked to be down.
+2016-09-30 19:20:26.631045 Example Domain Ping Check is checked to be down.
+2016-09-30 19:20:26.632053 Example HTTP Response Check is checked to be down.
+2016-09-30 19:20:26.637050 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:20:26.638053 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:20:46.865351 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:20:46.880978 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:20:46.880978 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:20:46.880978 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:20:46.880978 Example Domain/Port Check is checked to be down.
+2016-09-30 19:20:46.880978 Example IP Ping Check is checked to be down.
+2016-09-30 19:20:46.880978 Example Domain Ping Check is checked to be down.
+2016-09-30 19:20:46.880978 Example HTTP Response Check is checked to be down.
+2016-09-30 19:20:46.880978 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:20:46.896598 Example HTTPS With Auth is checked to be down.
+2016-09-30 19:20:57.660389 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-09-30 19:20:57.677270 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:20:57.678259 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-09-30 19:20:57.679258 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-09-30 19:20:57.679258 Example Domain/Port Check is checked to be down.
+2016-09-30 19:20:57.680259 Example IP Ping Check is checked to be down.
+2016-09-30 19:20:57.680259 Example Domain Ping Check is checked to be down.
+2016-09-30 19:20:57.680259 Example HTTP Response Check is checked to be down.
+2016-09-30 19:20:57.681260 Example HTTPS Response Check is checked to be down.
+2016-09-30 19:20:57.681260 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:07:56.908122 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:07:57.910328 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:07:57.911328 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:07:57.911829 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:07:57.912329 Example Domain/Port Check is checked to be down.
+2016-10-02 16:07:57.912329 Example HTTP Response Check is checked to be down.
+2016-10-02 16:07:57.912830 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:07:57.912830 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:08:49.486352 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:08:50.488094 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:08:50.489085 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:08:50.489585 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:08:50.490087 Example Domain/Port Check is checked to be down.
+2016-10-02 16:08:50.490587 Example HTTP Response Check is checked to be down.
+2016-10-02 16:08:50.490587 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:08:50.491088 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:10:29.573185 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:10:30.575889 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:10:30.576389 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:10:30.577390 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:10:30.577890 Example Domain/Port Check is checked to be down.
+2016-10-02 16:10:30.578390 Example HTTP Response Check is checked to be down.
+2016-10-02 16:10:30.578890 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:10:30.579396 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:11:02.720244 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:11:03.722034 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:11:03.722534 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:11:03.723534 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:11:03.724034 Example Domain/Port Check is checked to be down.
+2016-10-02 16:11:03.724535 Example HTTP Response Check is checked to be down.
+2016-10-02 16:11:03.724535 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:11:03.725036 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:11:35.861168 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:11:36.863374 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:11:36.864359 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:11:36.864860 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:11:36.865376 Example Domain/Port Check is checked to be down.
+2016-10-02 16:11:36.865859 Example HTTP Response Check is checked to be down.
+2016-10-02 16:11:36.866359 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:11:36.866359 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:12:08.998698 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:12:10.000430 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:12:10.001431 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:12:10.002432 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:12:10.002932 Example Domain/Port Check is checked to be down.
+2016-10-02 16:12:10.002932 Example HTTP Response Check is checked to be down.
+2016-10-02 16:12:10.003432 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:12:10.003937 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:12:42.139749 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:12:43.141933 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:12:43.142931 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:12:43.143932 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:12:43.144431 Example Domain/Port Check is checked to be down.
+2016-10-02 16:12:43.144932 Example HTTP Response Check is checked to be down.
+2016-10-02 16:12:43.145490 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:12:43.145490 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:13:15.277639 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:13:16.279847 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:13:16.280847 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:13:16.281856 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:13:16.282348 Example Domain/Port Check is checked to be down.
+2016-10-02 16:13:16.282348 Example HTTP Response Check is checked to be down.
+2016-10-02 16:13:16.282849 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:13:16.283349 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:13:48.420910 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:13:49.423107 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:13:49.423607 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:13:49.424608 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:13:49.425118 Example Domain/Port Check is checked to be down.
+2016-10-02 16:13:49.425118 Example HTTP Response Check is checked to be down.
+2016-10-02 16:13:49.425609 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:13:49.426109 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:14:21.559825 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:14:22.561639 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:14:22.562631 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:14:22.563632 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:14:22.563632 Example Domain/Port Check is checked to be down.
+2016-10-02 16:14:22.564132 Example HTTP Response Check is checked to be down.
+2016-10-02 16:14:22.564633 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:14:22.565133 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:14:54.700501 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:14:55.703238 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:14:55.704229 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:14:55.705231 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:14:55.705739 Example Domain/Port Check is checked to be down.
+2016-10-02 16:14:55.706246 Example HTTP Response Check is checked to be down.
+2016-10-02 16:14:55.706746 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:14:55.707230 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:15:37.107321 pinging93.184.216.34
+2016-10-02 16:15:38.211677 pinging127.0.0.1
+2016-10-02 16:15:39.244290 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:15:40.246974 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:15:40.247475 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:15:40.247975 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:15:40.248476 Example Domain/Port Check is checked to be down.
+2016-10-02 16:15:40.248976 Example HTTP Response Check is checked to be down.
+2016-10-02 16:15:40.249476 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:15:40.249476 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:16:10.252559 pinging93.184.216.34
+2016-10-02 16:16:11.357971 pinging127.0.0.1
+2016-10-02 16:16:12.389171 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:16:13.391091 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:16:13.392077 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:16:13.392578 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:16:13.393078 Example Domain/Port Check is checked to be down.
+2016-10-02 16:16:13.393578 Example HTTP Response Check is checked to be down.
+2016-10-02 16:16:13.394086 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:16:13.394597 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:16:33.984718 checking93.184.216.34
+2016-10-02 16:16:36.129293 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:16:37.130711 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:16:37.131898 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:16:37.132901 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:16:37.132901 Example Domain/Port Check is checked to be down.
+2016-10-02 16:16:37.133407 Example HTTP Response Check is checked to be down.
+2016-10-02 16:16:37.133903 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:16:37.134410 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:16:43.397382 pinging93.184.216.34
+2016-10-02 16:16:44.502243 pinging127.0.0.1
+2016-10-02 16:16:45.532017 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:16:46.536830 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:16:46.537816 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:16:46.540318 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:16:46.540818 Example Domain/Port Check is checked to be down.
+2016-10-02 16:16:46.540818 Example HTTP Response Check is checked to be down.
+2016-10-02 16:16:46.541320 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:16:46.541819 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:17:02.812762 checking93.184.216.34
+2016-10-02 16:17:04.961628 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:17:05.962994 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:17:05.963995 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:17:05.964495 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:17:05.964996 Example Domain/Port Check is checked to be down.
+2016-10-02 16:17:05.965496 Example HTTP Response Check is checked to be down.
+2016-10-02 16:17:05.965997 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:17:05.966997 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:17:22.738290 checking93.184.216.34
+2016-10-02 16:17:22.749799 checking127.0.0.1
+2016-10-02 16:17:24.886252 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:17:25.888313 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:17:25.889315 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:17:25.890322 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:17:25.890817 Example Domain/Port Check is checked to be down.
+2016-10-02 16:17:25.891316 Example HTTP Response Check is checked to be down.
+2016-10-02 16:17:25.891316 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:17:25.891816 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:17:55.894338 checking93.184.216.34
+2016-10-02 16:17:55.895350 checking127.0.0.1
+2016-10-02 16:17:58.028797 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:17:59.031821 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:17:59.032811 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:17:59.033317 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:17:59.033812 Example Domain/Port Check is checked to be down.
+2016-10-02 16:17:59.034312 Example HTTP Response Check is checked to be down.
+2016-10-02 16:17:59.034813 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:17:59.035313 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:18:29.037473 checking93.184.216.34
+2016-10-02 16:18:29.038487 checking127.0.0.1
+2016-10-02 16:18:31.170853 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.
+2016-10-02 16:18:32.173492 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:18:32.174496 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:18:32.174982 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:18:32.175981 Example Domain/Port Check is checked to be down.
+2016-10-02 16:18:32.176486 Example HTTP Response Check is checked to be down.
+2016-10-02 16:18:32.176991 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:18:32.176991 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:19:29.943511 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.[Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it.
+2016-10-02 16:19:30.945538 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:19:30.946543 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:19:30.947051 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:19:30.947556 Example Domain/Port Check is checked to be down.
+2016-10-02 16:19:30.948056 Example HTTP Response Check is checked to be down.
+2016-10-02 16:19:30.948543 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:19:30.949041 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:20:03.084369 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.[Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it.
+2016-10-02 16:20:04.086922 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:20:04.088436 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:20:04.088936 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:20:04.089439 Example Domain/Port Check is checked to be down.
+2016-10-02 16:20:04.089945 Example HTTP Response Check is checked to be down.
+2016-10-02 16:20:04.090435 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:20:04.090946 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:20:36.228631 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.[Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it.
+2016-10-02 16:20:37.230992 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:20:37.231981 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:20:37.232482 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:20:37.233481 Example Domain/Port Check is checked to be down.
+2016-10-02 16:20:37.233981 Example HTTP Response Check is checked to be down.
+2016-10-02 16:20:37.234486 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:20:37.234486 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:21:09.371088 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.[Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it.
+2016-10-02 16:21:10.373547 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:21:10.374047 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:21:10.375048 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:21:10.376049 Example Domain/Port Check is checked to be down.
+2016-10-02 16:21:10.376049 Example HTTP Response Check is checked to be down.
+2016-10-02 16:21:10.376550 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:21:10.377049 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:21:42.510253 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.[Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it.
+2016-10-02 16:21:43.512272 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:21:43.513260 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:21:43.515779 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:21:43.516287 Example Domain/Port Check is checked to be down.
+2016-10-02 16:21:43.516763 Example HTTP Response Check is checked to be down.
+2016-10-02 16:21:43.517263 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:21:43.517766 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:22:15.653712 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.[Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it.
+2016-10-02 16:22:16.654936 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:22:16.656439 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:22:16.657447 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:22:16.657951 Example Domain/Port Check is checked to be down.
+2016-10-02 16:22:16.658441 Example HTTP Response Check is checked to be down.
+2016-10-02 16:22:16.658941 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:22:16.659440 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:22:48.795773 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.[Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it.
+2016-10-02 16:22:49.797885 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:22:49.798879 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:22:49.799880 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:22:49.800380 Example Domain/Port Check is checked to be down.
+2016-10-02 16:22:49.800881 Example HTTP Response Check is checked to be down.
+2016-10-02 16:22:49.801380 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:22:49.801380 Example HTTPS With Auth is checked to be down.
+2016-10-02 16:23:21.938104 check_port_open(): ('127.0.0.1', 443) is not a valid IP to test.[Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it.
+2016-10-02 16:23:22.940294 check_HTTP_response_content(): http://example.com:80/ triggered an unknown error.
+2016-10-02 16:23:22.941296 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:23:22.942314 check_HTTP_response_content(): https://example.com/ triggered an unknown error.
+2016-10-02 16:23:22.942800 Example Domain/Port Check is checked to be down.
+2016-10-02 16:23:22.942800 Example HTTP Response Check is checked to be down.
+2016-10-02 16:23:22.943299 Example HTTPS Response Check is checked to be down.
+2016-10-02 16:23:22.943800 Example HTTPS With Auth is checked to be down.

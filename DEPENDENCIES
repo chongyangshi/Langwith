@@ -1,7 +1,0 @@
-gevent
-greenlet
-pyopenssl
-ndg-httpsclient
-pyasn1
-urllib3
-requests

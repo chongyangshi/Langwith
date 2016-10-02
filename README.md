@@ -16,17 +16,17 @@ Optionally, if the system running the script is audio-capable (e.g. desktop mach
 ![1](https://i.imgur.com/1ITo0Fu.png Some servers are down.)
 
 ##Installation
-Langwith can run on most Linux distributions, Mac OS X, and potentially BSDs (although untested).
+Langwith can run on most Linux distributions, Mac OS X, Windows (as of Oct 2016) and potentially BSDs (although untested).
 
 Langwith is written for [Python 3](https://www.python.org/downloads/). It requires some other Python libraries.
 
 If you are using a linux distribution, you may wish to install libffi-dev and libssl-dev or their equivalents on non-Debian/Ubuntu distros.
 
-If you have pip installed,
+Please first have [pip](https://pip.pypa.io/en/stable/installing/) installed, then switch to the source directory of Langwith and execute:
 
-    pip install gevent greenlet pyopenssl ndg-httpsclient pyasn1 urllib3 requests
+    python setup.py
 
-should install all dependencies required.
+This should install all dependencies required.
 
 Then you can download or git clone Langwith, and configure it as explained below.
 
