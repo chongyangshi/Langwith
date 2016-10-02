@@ -22,7 +22,7 @@ Langwith is written for [Python 3](https://www.python.org/downloads/). It requir
 
 If you are using a linux distribution, you may wish to install **python(3)-dev**, **libffi-dev** and **libssl-dev** or their equivalents on non-Debian/Ubuntu distros, for example:
 
-    apt-get install python3-dev libffi-dev libssl-dev
+    apt-get install python3-dev libffi-dev libssl-dev python3-setuptools python3-wheel python3-pip
 
 Please first have [pip](https://pip.pypa.io/en/stable/installing/) installed, then switch to the source directory of Langwith and execute:
 
