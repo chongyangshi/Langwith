@@ -20,11 +20,13 @@ Langwith can run on most Linux distributions, Mac OS X, Windows (as of Oct 2016)
 
 Langwith is written for [Python 3](https://www.python.org/downloads/). It requires some other Python libraries.
 
-If you are using a linux distribution, you may wish to install libffi-dev and libssl-dev or their equivalents on non-Debian/Ubuntu distros.
+If you are using a linux distribution, you may wish to install **python(3)-dev**, **libffi-dev** and **libssl-dev** or their equivalents on non-Debian/Ubuntu distros, for example:
+
+    apt-get install python3-dev libffi-dev libssl-dev
 
 Please first have [pip](https://pip.pypa.io/en/stable/installing/) installed, then switch to the source directory of Langwith and execute:
 
-    python setup.py
+    python3 setup.py
 
 This should install all dependencies required.
 

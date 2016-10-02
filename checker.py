@@ -110,7 +110,7 @@ def check_HTTP_response_content(target, test_string='', auth_credentials=None, v
         
         if test_string != '':
             response_content = response.content
-            if str(test_string) in response_content:
+            if str.encode(str(test_string)) in response_content:
                 return True
             else:
                 return False
