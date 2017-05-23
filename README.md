@@ -1,7 +1,7 @@
 # Langwith
 Easy server monitoring on command line.
 
-##What is it?
+## What is it?
 Langwith is a server monitoring tool for displaying the status of your servers in your terminal. It supports three methods of checks: TCP Port, Ping and HTTP(S) Response.
 
 The interface, implemented in [curses](https://docs.python.org/2/library/curses.html) provides a single-page at-a-glance style display, suitable for putting up on a monitor or projector screen.
@@ -10,12 +10,13 @@ Checks are initiated from the system that is running the script. Langwith can al
 
 Optionally, if the system running the script is audio-capable (e.g. desktop machine), an alarm can be set to go off when a monitored server goes offline.
 
-##Interface
-![1](https://i.imgur.com/MGvcZkE.png All servers are up.)
+## Interface
 
-![1](https://i.imgur.com/1ITo0Fu.png Some servers are down.)
+![1](https://i.imgur.com/MGvcZkE.png "All servers are up.")
 
-##Installation
+![1](https://i.imgur.com/1ITo0Fu.png "Some servers are down.")
+
+## Installation
 Langwith can run on most Linux distributions, Mac OS X, Windows (as of Oct 2016) and potentially BSDs (although untested).
 
 Langwith is written for [Python 3](https://www.python.org/downloads/). It requires some other Python libraries.
@@ -32,13 +33,13 @@ This should install all dependencies required.
 
 Then you can download or git clone Langwith, and configure it as explained below.
 
-##Configuration
+## Configuration
 
-###Langwith Settings
+### Langwith Settings
 
 Edit **settings.json**, set the interval (15 - 300, in seconds) you would like for Langwith to run all checks (*refresh_interval*); and set *play_alarm* to *true* or *false* depends on whether you want a short alarm to go off when a server goes offline.
 
-####Email Notifications (Optional)
+#### Email Notifications (Optional)
 
 You can also set Langwith to notify you via email when a server goes down. To avoid creating problems by sending emails through SMTP from your device, Langwith can be used with [Mailgun](https://mailgun.com) sending service, which provides you with a free monthly sending allowance of 10,000 emails. If you want to make Langwith send notification emails, you need to register a free account at [Mailgun](https://mailgun.com), and verify your email sending domain. 
 
@@ -90,13 +91,13 @@ To run Langwith, ensure that the terminal size is sufficient for the number of e
     python main.py
 
 
-##Feedback, Bug Reports, and Pull Requests
+## Feedback, Bug Reports, and Pull Requests
 This is my first attempt at using curses, so I expect my implementation to be far from perfect.
 
 Feedback, bug reports and pull requests are very welcome.
 You can also contact me at shi[AT]ebornet.com .
 
-###ToDos
+### ToDos
 
 - ~~SMTP email notification when a server goes offline, or potentially through an email sending service's API.~~ Email notifications now available with Mailgun API.
 
