@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # The MIT License (MIT)
-# Copyright (c) 2015 icydoge (icydoge@gmail.com)
+# Copyright (c) chongyangshi (icydoge@gmail.com)
 # For full license details, see LICENSE.
 #
 # Langwith.utils: this module provides utility functions for other parts of the program.
